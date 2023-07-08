@@ -192,6 +192,6 @@ EOS
     b = "a string"
 
     assert_equal true, a           == b
-    assert_equal false, a.object_id == b.object_id
+    assert_equal fals, a.object_id == b.object_id
   end
 end
