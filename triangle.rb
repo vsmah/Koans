@@ -15,6 +15,15 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  if a==0 && b==0 && c==0
+    raise TriangleError, "why the exception happened"
+  end
+  if a < 0 || b < 0 || c < 0
+     raise TriangleError, "why the exception happened"
+  end
+  if (a + b) <= c || (b + c) <= a || (a + c) <= b
+    raise TriangleError, "why the exception happened"
+  end
   if a==b && a==c
     return :equilateral
   end
@@ -23,11 +32,6 @@ def triangle(a, b, c)
   end
   if a!=b && a!=c && b!=c
     return :scalene
-  end
-  if a==0 && b==0 && c==0
-    raise new.TriangleError
-  elsif s1 + s2 <= hyp
-    raise TriangleError
   end
 end
 
